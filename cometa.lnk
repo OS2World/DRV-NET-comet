@@ -1,0 +1,85 @@
+=====================================================================
+ADMtek AL981(Comet)/AN983(Centaur) Another NDIS 2.0.1 MAC driver 1.03
+=====================================================================
+
+1.Introduction
+
+ADMtek AL981/AN983 are one variety of DEC compatible chips.
+
+ADMtek had provided the official driver on the site, 
+http://www.admtek.com.tw/ , but the OS/2 NDIS driver seems to disapear 
+in the current archive file, AN983B_DRV_205.zip.
+The official driver provided previously is available on NICPAK.
+
+
+Included files are:
+cometa.os2	NDIS 2.0.1 MAC driver
+cometa.nif	Network Information File
+cometa.sym	Symbol Map file
+cometa.lnk	Document (this file)
+source.zip	source files
+
+You could download the latest file on the gomi:NDIS MAC Drivers page,
+URL http://www.os2warp.be/index2.php?name=gomindis .
+
+
+2.No Warranty
+
+This code is provided 'AS IS' and any warranties are disclaimed.
+
+
+3.Functional restrictions
+
+- External PHYs are not supported. Only built-in PHY is supported.
+- Wake-on-LAN is not supported.
+
+
+4.Considerable configuration keywords
+
+- MXDMA=128 (32dword) may cause malfunction.
+- TXTO keyword may be meaningless at the current version.
+
+
+5.Note
+
+- No test on SMP environment. (I gess it can work.)
+
+
+6.Redistribution with modification
+
+Your should add your copyright notice, 
+"(c)Copyright 2004 your name. All rights reserved."
+and remove mine (if it exists),
+"(c)Copyright 2004 chagrin. Some rights reserved."
+
+This means that the modified binary/source is not mine, but yours, 
+regardless of the degree of the modification. 
+You can redistribute, of course, that for the commercial purpose 
+without any fee to me, without releasing the source, if you want.
+
+Don't forget that I'm never liable for your product.
+(You, also, should add a disclaimer.)
+
+
+7.History
+
+ver.1.03 - 12/17, 2005.
+- 1 new keyword, IRQ15OVR, was added.
+
+ver.1.02 - 11/15, 2005.
+- Workaround for Virtual PC.
+
+ver.1.01 - 4/1, 2004.
+- Bugfix:Multicast hash table was corrected.
+
+ver.1.00 - 3/21, 2004.
+-  Initial release.
+
+
+8.Contact to the author
+
+Access os2warp.be Technical Support Center,
+URL http://www.os2warp.be/support/
+ or
+Email to YANAGIHARA Nobuyuki,
+ <VYL00513@nifty.ne.jp>
